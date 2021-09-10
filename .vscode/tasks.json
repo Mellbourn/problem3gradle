@@ -21,6 +21,24 @@
 				"$gradle"
 			],
 			"label": "gradle: app:build"
+		},
+		{
+			"type": "gradle",
+			"id": "/Users/klas.mellbourn/code/private/minda/problem3gradleapp:testapp",
+			"script": "app:test",
+			"description": "Runs the unit tests.",
+			"group": "verification",
+			"project": "app",
+			"buildFile": "/Users/klas.mellbourn/code/private/minda/problem3gradle/app/build.gradle",
+			"rootProject": "problem3",
+			"projectFolder": "/Users/klas.mellbourn/code/private/minda/problem3gradle",
+			"workspaceFolder": "/Users/klas.mellbourn/code/private/minda/problem3gradle",
+			"args": "",
+			"javaDebug": false,
+			"problemMatcher": [
+				"$gradle"
+			],
+			"label": "gradle: app:test"
 		}
 	]
 }
