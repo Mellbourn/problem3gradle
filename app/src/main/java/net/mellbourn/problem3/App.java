@@ -1,4 +1,4 @@
-package com.capenta.problem3;
+package net.mellbourn.problem3;
 
 public final class App {
 
