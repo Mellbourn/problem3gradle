@@ -1,33 +1,26 @@
 package com.capenta.problem3;
 
-/**
- * School assignment.
- */
 public final class App {
 
-    /** */
-    private App() {
-    }
+  private App() {
+  }
 
-    /**
-     * @return single random digit
-     */
-    private static int randomDigit() {
-        final var maxSingleDigit = 10;
-        return (int) (Math.random() * maxSingleDigit);
-    }
+  private static int randomDigit() {
+    final var maxSingleDigit = 10;
+    return (int) (Math.random() * maxSingleDigit);
+  }
 
-    /**
-     * main program.
-     */
-    public static void main() {
-        final int numberOfRows = 5;
-        final int numberOfDigits = 6;
-        for (var row = 0; row < numberOfRows; row++) {
-            for (var digit = 0; digit < numberOfDigits; digit++) {
-                System.out.print(randomDigit());
-            }
-            System.out.println();
-        }
+  /**
+   * Main program.
+   */
+  public static void main() {
+    final int numberOfRows = 5;
+    final int numberOfDigits = 6;
+    for (var row = 0; row < numberOfRows; row++) {
+      for (var digit = 0; digit < numberOfDigits; digit++) {
+        System.out.print(randomDigit());
+      }
+      System.out.println();
     }
+  }
 }
