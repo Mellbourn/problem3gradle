@@ -3,3 +3,16 @@
 
 # Ignore Gradle build output directory
 build
+
+# written by hand by Klas
+
+*.class
+
+# should be ignored according to https://stackoverflow.com/questions/60668428/why-do-people-gitignore-classpath-and-project
+app/.classpath
+
+# ignore the rest too, see if that works
+.settings
+app/.project
+app/.settings
+.project
