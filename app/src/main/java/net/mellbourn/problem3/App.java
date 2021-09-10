@@ -8,23 +8,20 @@ public final class App {
 	
 	private static void tryThis1() {
 		for(var i = 0; i < 10; i++) {
-			System.out.println(randomDigit());
+			System.out.println(randomDigit(9));
 		}
 	}
 
 	private static void tryThis2() {
-		System.out.print("How many lines? ");
+		System.out.print("n? ");
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
 		in.close();
-		for(var i = 0; i < n; i++) {
-			System.out.println(randomDigit());
-		}
+		System.out.println(randomDigit(n));
 	}
 
-	private static int randomDigit() {
-		final var maxSingleDigit = 10;
-		return (int) (Math.random() * maxSingleDigit);
+	private static int randomDigit(final int max) {
+		return (int) (Math.random() * (max + 1));
 	}
 
 	private static void problem3() {
@@ -32,7 +29,7 @@ public final class App {
 		final int numberOfDigits = 6;
 		for (var row = 0; row < numberOfRows; row++) {
 			for (var digit = 0; digit < numberOfDigits; digit++) {
-				System.out.print(randomDigit());
+				System.out.print(randomDigit(9));
 			}
 			System.out.println();
 		}
@@ -42,6 +39,6 @@ public final class App {
 	 * Main program.
 	 */
 	public static void main(String[] args) {
-		tryThis2();
+		problem3();
 	}
 }
