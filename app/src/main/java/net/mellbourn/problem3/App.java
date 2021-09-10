@@ -120,6 +120,26 @@ public final class App {
     return (int) (min + Math.random() * (max - min + 1));
   }
 
+  private static void problem1() {
+    for (var i = 2; i <= 10; i = i + 2) {
+      System.out.println(i);
+    }
+  }
+
+  private static void countdown(final int a) {
+    for (var i = a; i >= 0; i--) {
+      System.out.println(i);
+    }
+  }
+
+  private static void problem2countdown() {
+    System.out.print("a? ");
+    Scanner scanner = new Scanner(System.in);
+    final int a = scanner.nextInt();
+    countdown(a);
+    scanner.close();
+  }
+
   private static void problem3() {
     final int numberOfRows = 5;
     final int numberOfDigits = 6;
@@ -135,6 +155,6 @@ public final class App {
    * Main program.
    */
   public static void main(String[] args) {
-    tryThis3randomNumbersEqualWithStatistics();
+    problem2countdown();
   }
 }
