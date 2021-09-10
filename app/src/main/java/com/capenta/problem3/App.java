@@ -13,7 +13,7 @@ public final class App {
   /**
    * Main program.
    */
-  public static void main() {
+  public static void main(String[] args) {
     final int numberOfRows = 5;
     final int numberOfDigits = 6;
     for (var row = 0; row < numberOfRows; row++) {
