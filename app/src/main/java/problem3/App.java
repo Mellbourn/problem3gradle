@@ -4,11 +4,16 @@
 package problem3;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+    private static final int randomDigit() {
+        return (int) (Math.random() * 10);
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        for (var row = 0; row < 5; row++) {
+            for (var digit = 0; digit < 6; digit++) {
+                System.out.print(randomDigit());
+            }
+            System.out.println();
+        }
     }
 }
