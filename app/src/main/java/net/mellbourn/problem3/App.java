@@ -15,7 +15,7 @@ public final class App {
 	private static void tryThis2() {
 		System.out.print("n? ");
 		Scanner in = new Scanner(System.in);
-		int n = in.nextInt();
+		final int n = in.nextInt();
 		in.close();
 		System.out.println(randomDigit(0, n));
 	}
@@ -23,9 +23,9 @@ public final class App {
 	private static void tryThis3() {
 		Scanner in = new Scanner(System.in);
 		System.out.print("a? ");
-		int a = in.nextInt();
+		final int a = in.nextInt();
 		System.out.print("b? ");
-		int b = in.nextInt();
+		final int b = in.nextInt();
 		in.close();
 		System.out.println(randomDigit(a, b));
 	}
@@ -33,13 +33,28 @@ public final class App {
 	private static void tryThis4() {
 		Scanner in = new Scanner(System.in);
 		System.out.print("a? ");
-		int a = in.nextInt();
+		final int a = in.nextInt();
 		System.out.print("b? ");
-		int b = in.nextInt();
+		final int b = in.nextInt();
 		in.close();
 		for (var i = 0; i < 10; i++) {
 			System.out.println(randomDigit(a, b));
 		}
+	}
+
+	private static void tryThis5() {
+		Scanner in = new Scanner(System.in);
+		System.out.print("value? ");
+		final int value = in.nextInt();
+		in.close();
+		int times = 0;
+		int random;
+		do {
+			random = randomDigit(0, 9);
+			System.out.println(random);
+			times++;
+		} while (random != value);
+		System.out.println("It took " + times + " times");
 	}
 
 	private static int randomDigit(final int min, final int max) {
@@ -61,6 +76,6 @@ public final class App {
 	 * Main program.
 	 */
 	public static void main(String[] args) {
-		tryThis4();
+		tryThis5();
 	}
 }
