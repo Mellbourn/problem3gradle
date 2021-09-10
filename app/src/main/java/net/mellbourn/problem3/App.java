@@ -4,6 +4,12 @@ public final class App {
 
 	private App() {
 	}
+	
+	private static void tryThis1() {
+		for(var i = 0; i < 10; i++) {
+			System.out.println(randomDigit());
+		}
+	}
 
 	private static int randomDigit() {
 		final var maxSingleDigit = 10;
@@ -25,6 +31,6 @@ public final class App {
 	 * Main program.
 	 */
 	public static void main(String[] args) {
-		problem3();
+		tryThis1();
 	}
 }
