@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "gradle",
+			"id": "/Users/klas.mellbourn/code/private/minda/problem3gradleapp:buildapp",
+			"script": "app:build",
+			"description": "Assembles and tests this project.",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"project": "app",
+			"buildFile": "/Users/klas.mellbourn/code/private/minda/problem3gradle/app/build.gradle",
+			"rootProject": "problem3",
+			"projectFolder": "/Users/klas.mellbourn/code/private/minda/problem3gradle",
+			"workspaceFolder": "/Users/klas.mellbourn/code/private/minda/problem3gradle",
+			"args": "",
+			"javaDebug": false,
+			"problemMatcher": [
+				"$gradle"
+			],
+			"label": "gradle: app:build"
+		}
+	]
+}
