@@ -12,7 +12,7 @@ build
 app/.classpath
 
 # ignore the rest too, see if that works
-.settings
-app/.project
-app/.settings
-.project
+#.settings
+#app/.project
+#app/.settings
+#.project
