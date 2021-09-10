@@ -15,5 +15,6 @@
         "titleBar.inactiveBackground": "#3589bd99",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#3589bd"
+    "peacock.color": "#3589bd",
+    "java.checkstyle.configuration": "/sun_checks.xml"
 }
