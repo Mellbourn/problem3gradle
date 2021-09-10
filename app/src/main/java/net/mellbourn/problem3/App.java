@@ -1,4 +1,5 @@
 package net.mellbourn.problem3;
+import java.util.Scanner;
 
 public final class App {
 
@@ -7,6 +8,16 @@ public final class App {
 	
 	private static void tryThis1() {
 		for(var i = 0; i < 10; i++) {
+			System.out.println(randomDigit());
+		}
+	}
+
+	private static void tryThis2() {
+		System.out.print("How many lines? ");
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		in.close();
+		for(var i = 0; i < n; i++) {
 			System.out.println(randomDigit());
 		}
 	}
@@ -31,6 +42,6 @@ public final class App {
 	 * Main program.
 	 */
 	public static void main(String[] args) {
-		tryThis1();
+		tryThis2();
 	}
 }
