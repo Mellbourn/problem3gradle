@@ -58,6 +58,64 @@ public final class App {
     System.out.println("It took " + times + " times");
   }
 
+  private static void tryThis1LoopEvenNumbers() {
+    for (var i = 2; i < 20; i = i + 2) {
+      System.out.println(i);
+    }
+  }
+
+  private static void tryThis2randomNumbersEqual() {
+    int random1;
+    int random2;
+    do {
+      random1 = randomDigit(1, 10);
+      random2 = randomDigit(1, 10);
+      System.out.println(random1 + " " + random2);
+    } while (random1 != random2);
+  }
+
+  private static int randomNumbersEqualAfter() {
+    int random1;
+    int random2;
+    int iterations = 0;
+    do {
+      random1 = randomDigit(1, 10);
+      random2 = randomDigit(1, 10);
+      iterations++;
+    } while (random1 != random2);
+    return iterations;
+  }
+
+  private static void tryThis3randomNumbersEqualWithAverage() {
+    int sum = 0;
+    final int iterations = 10000;
+    for (var i = 0; i < iterations; i++) {
+      sum += randomNumbersEqualAfter();
+    }
+    System.out.println("Average: " + (float) sum / iterations);
+  }
+
+  private static void tryThis3randomNumbersEqualWithStatistics() {
+    int sum = 0;
+    int min = Integer.MAX_VALUE;
+    int max = 0;
+    final int iterations = 10000;
+    for (var i = 0; i < iterations; i++) {
+      final int number = randomNumbersEqualAfter();
+      sum += number;
+      if (number > max) {
+        max = number;
+      }
+      if (number < min) {
+        min = number;
+      }
+    }
+    System.out.println();
+    System.out.println("Average: " + (float) sum / iterations);
+    System.out.println("Max: " + max);
+    System.out.println("Min: " + min);
+  }
+
   private static int randomDigit(final int min, final int max) {
     return (int) (min + Math.random() * (max - min + 1));
   }
@@ -77,6 +135,6 @@ public final class App {
    * Main program.
    */
   public static void main(String[] args) {
-    problem3();
+    tryThis3randomNumbersEqualWithStatistics();
   }
 }
