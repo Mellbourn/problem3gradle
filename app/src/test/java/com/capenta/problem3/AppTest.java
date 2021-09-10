@@ -12,7 +12,6 @@ import com.capenta.problem3.App;
 class AppTest {
     @Test
     void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest, "app should be possible to instantiate");
+    	App.main(new String[0]);
     }
 }
