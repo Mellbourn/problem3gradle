@@ -151,10 +151,60 @@ public final class App {
     }
   }
 
+  private static void problem1_1() {
+    for (var i = 1; i <= 10; i++) {
+      if (i % 2 == 0) {
+        System.out.println(i);
+      }
+    }
+  }
+
+  private static void problem1_2() {
+    Scanner in = new Scanner(System.in);
+    System.out.print("a? ");
+    final int a = in.nextInt();
+    System.out.print("b? ");
+    final int b = in.nextInt();
+    in.close();
+    int result = 0;
+    for (var i = 0; i < b; i++) {
+      result += a;
+    }
+    System.out.println(result);
+  }
+
+  private static void printHorizontalSide(final int size) {
+    for (var i = 0; i < size; i++) {
+      System.out.print("*");
+    }
+    System.out.println();
+  }
+
+  private static void printVerticalSideStep(final int size) {
+    System.out.print("*");
+    for (var i = 1; i < size - 1; i++) {
+      System.out.print(" ");
+    }
+    System.out.print("*");
+    System.out.println();
+  }
+
+  private static void problem1_3() {
+    Scanner in = new Scanner(System.in);
+    System.out.print("size? ");
+    final int size = in.nextInt();
+    in.close();
+    printHorizontalSide(size);
+    for (var i = 1; i < size - 1; i++) {
+      printVerticalSideStep(size);
+    }
+    printHorizontalSide(size);
+  }
+
   /**
    * Main program.
    */
   public static void main(String[] args) {
-    problem2countdown();
+    problem1_3();
   }
 }
